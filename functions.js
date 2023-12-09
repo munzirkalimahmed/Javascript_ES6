@@ -40,27 +40,27 @@
 // ask user his weight and height (bmi = w/h**2)
 // 
 
-function obese_calc(weight,height){
-    bmi = weight / (height**2)
-    if (bmi>=40){
-        return "Obese"
-    }
-    else if (bmi>=25 && bmi<40){
-        return "Over Weight"
-    }
-    else if(bmi>=18.5 && bmi<25){
-        return "Normal"
-    }
-    else {
-        return 'Under weight'
-    }
-}
+// function obese_calc(weight,height){
+//     bmi = weight / (height**2)
+//     if (bmi>=40){
+//         return "Obese"
+//     }
+//     else if (bmi>=25 && bmi<40){
+//         return "Over Weight"
+//     }
+//     else if(bmi>=18.5 && bmi<25){
+//         return "Normal"
+//     }
+//     else {
+//         return 'Under weight'
+//     }
+// }
 
-let weight_kg = parseFloat(prompt("Please enter your weight in kg"))
-let height_m = (parseFloat(prompt('Enter height in ft')))/3.3
+// let weight_kg = parseFloat(prompt("Please enter your weight in kg"))
+// let height_m = (parseFloat(prompt('Enter height in ft')))/3.3
 
-console.log(`Dear Sir you are ${obese_calc(weight_kg,height_m)}`)
-console.log(bmi)
+// console.log(`Dear Sir you are ${obese_calc(weight_kg,height_m)}`)
+// console.log(bmi)
 
 
 // write a function that calculates tax over salary
@@ -71,4 +71,33 @@ console.log(bmi)
 // else 1%                 .01    
 
 // if some one pays tax more than 2k say he is good citizen
+
+function tax_calculator(s){
+    if(s > 100000){
+        return (s*0.15)
+    }
+    else if(s > 70000){
+        return (s*0.10)
+
+    }
+    else if(s > 50000){
+        return (s*0.05)
+
+    }
+    else if(s > 30000){
+        return (s*0.02)
+
+    }
+    else{
+        return (s*0.01)
+
+    }
+}
+
+let salary = Number(prompt("Enter your salary"));
+
+console.log(`Dear Sir your salary is: ${salary} and tax calculated is: ${tax_calculator(salary)}`);
+
+
+
 
