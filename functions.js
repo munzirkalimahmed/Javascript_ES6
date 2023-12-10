@@ -1,66 +1,101 @@
-        // function declaration
-// function greet_user(){
 
-//     console.log("Welcome Mr. Asad")
-// }
+function addition() {
+    a=10;
+    b=20;
+    c= a+b;
+    console.log(c);
+  }
 
-//          // calling a function
+  addition()
+  addition()
+  addition()
 
-// greet_user()
-// greet_user()
-// greet_user()
 
-//         // a function with parameter :parametrized function
-// function greet_user(username){
+  function addition(a,b) {
+    c= a+b;
+    console.log(c);
+  }
 
-//     console.log(`Welcome Mr. ${username}`)
-// }
 
-// greet_user('Ali')
-// greet_user('')
+  addition(10,20)
+  addition(20,30)
+  addition(30,40)
 
-// function konBaraHy(a,b){
 
-//     if(a>b){
-//         console.log("A is big")
-//     }
-//     else if (b>a){
-//         console.log("B ig big")
-//     }
-//     else{
-//         console.log("No one is big ")
-//     }
+  function addition(a,b) {
+    c= a+b;
+    return c;
+  }
 
-// }
 
-// konBaraHy(20,13)
-// konBaraHy(20,20)
+ans = addition(10,20)
+console.log(ans *20)
+ 
+
+ 
+ //function declaration
+function greet_user(){
+
+    console.log("Welcome Mr. Asad")
+}
+
+// calling a function
+
+greet_user()
+greet_user()
+greet_user()
+
+// a function with parameter :parametrized function
+function greet_user(username){
+
+    console.log(`Welcome Mr. ${username}`)
+}
+
+greet_user('Ali')
+greet_user('')
+
+ function konBaraHy(a,b){
+
+    if(a>b){
+        console.log("A is big")
+    }
+    else if (b>a){
+        console.log("B ig big")
+    }
+    else{
+        console.log("No one is big ")
+    }
+
+}
+
+konBaraHy(20,13)
+konBaraHy(20,20)
 
 // write a function tht calculate BMI.
 // ask user his weight and height (bmi = w/h**2)
 // 
 
-// function obese_calc(weight,height){
-//     bmi = weight / (height**2)
-//     if (bmi>=40){
-//         return "Obese"
-//     }
-//     else if (bmi>=25 && bmi<40){
-//         return "Over Weight"
-//     }
-//     else if(bmi>=18.5 && bmi<25){
-//         return "Normal"
-//     }
-//     else {
-//         return 'Under weight'
-//     }
-// }
+function obese_calc(weight,height){
+    bmi = weight / (height**2)
+    if (bmi>=40){
+        return "Obese"
+    }
+    else if (bmi>=25 && bmi<40){
+        return "Over Weight"
+    }
+    else if(bmi>=18.5 && bmi<25){
+        return "Normal"
+    }
+    else {
+        return 'Under weight'
+    }
+}
 
-// let weight_kg = parseFloat(prompt("Please enter your weight in kg"))
-// let height_m = (parseFloat(prompt('Enter height in ft')))/3.3
+let weight_kg = parseFloat(prompt("Please enter your weight in kg"))
+let height_m = (parseFloat(prompt('Enter height in ft')))/3.3
 
-// console.log(`Dear Sir you are ${obese_calc(weight_kg,height_m)}`)
-// console.log(bmi)
+console.log(`Dear Sir you are ${obese_calc(weight_kg,height_m)}`)
+console.log(bmi)
 
 
 // write a function that calculates tax over salary
