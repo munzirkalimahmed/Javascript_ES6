@@ -151,37 +151,37 @@ var plan1 =
     console.log(my_plan)
     console.log(your_plan)*/
 
-    function Plan(name, price, space, transfer, pages,discountMonths) {
-        this.name = name;
-        this.price = price;
-        this.space = space;
-        this.transfer = transfer;
-        this.pages = pages;
-        this.discountMonths = discountMonths,
-        this.calcAnnual = function(perc)
-        {
-            var bestPrice = my_plan.price;
-            var currDate = new Date();
-            var thisMo = currDate.getMonth()+1;
+    // function Plan(name, price, space, transfer, pages,discountMonths) {
+    //     this.name = name;
+    //     this.price = price;
+    //     this.space = space;
+    //     this.transfer = transfer;
+    //     this.pages = pages;
+    //     this.discountMonths = discountMonths,
+    //     this.calcAnnual = function(perc)
+    //     {
+    //         var bestPrice = my_plan.price;
+    //         var currDate = new Date();
+    //         var thisMo = currDate.getMonth()+1;
             
-            for (var i = 0; i < my_plan.discountMonths.length; i++) 
-                {
-                if (my_plan.discountMonths[i] === thisMo) 
-                    {
-                    bestPrice = my_plan.price * perc;
-                    break;
-                    }
-                }
-            return bestPrice * 12;
-        } 
-    }
+    //         for (var i = 0; i < my_plan.discountMonths.length; i++) 
+    //             {
+    //             if (my_plan.discountMonths[i] === thisMo) 
+    //                 {
+    //                 bestPrice = my_plan.price * perc;
+    //                 break;
+    //                 }
+    //             }
+    //         return bestPrice * 12;
+    //     } 
+    // }
 
-    my_plan = new Plan('Advance',10.99, 1000,5000,10,[1,6,12])
-    your_plan = new Plan('Basic',4.99,300,1000,4,[1,6,12])
+    // my_plan = new Plan('Advance',10.99, 1000,5000,10,[1,6,12])
+    // your_plan = new Plan('Basic',4.99,300,1000,4,[1,6,12])
 
-    console.log(my_plan)
+    // console.log(my_plan)
 
-    console.log(my_plan.calcAnnual(0.8))
+    // console.log(my_plan.calcAnnual(0.8))
 
 
     
@@ -251,4 +251,53 @@ var plan1 =
 
     // console.log(plan1.calcAnnual(.50))
     // plan1.showproperties()
+
+
+    function Person(name,age,gender,cnic){
+        this.name =name,
+        this.age = age,
+        this.gender=gender,
+        this.cnic=cnic
+    }
+    
+    
+    let p1 = new Person('kaleemullah',23,'male','12345')
+    let p2 = new Person('Nasir',30,'male','456235')
+    
+    
+    function Plan(name, price, space, transfer, pages, discountMonths) 
+    {
+        this.name = name;
+        this.price = price;
+        this.space = space;
+        this.transfer = transfer;
+        this.pages = pages;
+        this.discountMonths = discountMonths;
+    
+        }
+    
+    Plan.prototype.calcAnnual = function() 
+    {
+    var bestPrice = this.price;
+    var currDate = new Date();
+    var thisMo = currDate.getMonth()+1;
+    
+        for (var i = 0; i < this.discountMonths.length; i++) 
+        {
+            if (this.discountMonths[i] === thisMo) 
+                {
+                bestPrice = this.price * .80;
+                break;
+                }
+        }
+        return bestPrice * 12;
+    };
+    
+    myPlan = new Plan('Advance',99.99,1000,5000,500,[6,12])
+    apkaPlan = new Plan('Basic',50.99,100,500,50,[1,6,12])
+
+
+
+    
+
    
