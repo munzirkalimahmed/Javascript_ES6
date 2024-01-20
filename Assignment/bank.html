@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    SMIT BANK
+    <script>
+
+class BankAccount{
+
+    constructor(account_number, account_holder_name,balance){
+        this.account_number =account_number
+        this.account_holder_name = account_holder_name
+        this.balance = balance
+    }
+    deposit(amt){
+
+        this.balance = this.balance + amt
+        alert("Yaqin rakhen apk pasie Allah ki qasam apk me chaly gaye hen")
+
+    }
+    withdraw(amt){
+        if (this.balance < amt){
+            alert("In sufficient Balance")
+        }
+        else{
+        this.balance = this.balance - amt
+        }
+    }
+    transfer(beneficiary_acc, amt){
+
+        for(let a=0; a<accounts.length;a++){
+
+            if (accounts[a].account_number === beneficiary_acc){
+                accounts[a].balance = accounts[a].balance + amt
+                this.balance = this.balance-amt
+
+                alert("Amt transfres successfuly")
+            }
+
+        }
+
+    }
+    balance(){
+
+        console.log(`Your account balance is ${this.balance} `)
+    }
+
+}
+
+acc1 = new BankAccount(1001, 'nasir', 10000)
+acc2 = new BankAccount(1002, 'hussain', 10000)
+acc3 = new BankAccount(1003, 'ali', 10000)
+
+var accounts = []
+accounts.push(acc1,acc2,acc3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
