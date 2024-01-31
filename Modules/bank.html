@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="module">
+        
+        import {Branch} from "./branch.js";
+        
+        class Bank {
+            constructor(bank_name, branches) {
+                this.bank_name = bank_name
+                this.branches = branches
+            }
+            addbranch(newbranch) {
+                if ((newbranch != undefined) && (!this.branches.includes(newbranch))) {
+                    this.branches.push(newbranch)
+                    alert("Branch Added")
+                }
+                else {
+                    alert("Invalid Branch")
+                }
+            }
+            removebranch(branch_name) {
+                if (this.branches.includes(branch_name)) {
+                    let index = this.branches.indexOf(branch_name)
+                    this.branches.splice(index, 1)
+
+                    alert("Branch Removed")
+                }
+                else {
+                    alert('Branch doesnt exist')
+                }
+            }
+            get_branches_name() {
+                document.write("Branches <br>")
+                for (let i = 0; i <= this.branches.length; i++) {                    
+                    document.write(`${this.branches[i]['name']} <br>`)
+                }
+            }
+
+            get_managers_name() {
+                document.write("Managers <br>")
+                for (let i = 0; i <= this.branches.length; i++) {
+                    
+                    document.write(`${this.branches[i]['manager']} <br>`)
+                }
+            }
+            
+        }
+        branch1 = new Branch('Saddar',123,'Peshawar','Munzir','123456',200000000)
+        branch2 = new Branch('Saddar',345,'Peshawar','Munzir','123456',200000000)
+        branch3 = new Branch('Saddar',567,'Peshawar','Munzir','123456',200000000)
+        bank1 = new Bank('ApnaBank',[branch1,branch2,branch3])
+
+
+
+
+        
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
